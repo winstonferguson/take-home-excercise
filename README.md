@@ -14,3 +14,43 @@ I had a particularly busy week and couldn’t prepare questions in advance, so I
 * No external gems are mentioned. The only additonal gem I'll use is the requestjs-rails gem to make Ajax Requests.
 * A cart page normally follows a shop page, so my application’s root will be a product listing page. This page will feature products with an 'add to cart' functionality for each product.
 
+
+## Code Overview
+
+### Models
+
+* Discount: Represents price offsets applicable to an order.
+* Product: Represents items available for purchase.
+* Order: Tracks user orders and their statuses.
+* OrderAdjustment: Records products included in an order.
+* OrderItem: Records discounts included in an order.
+* Supplier: Source of products.
+
+
+### Controllers
+
+Scaffold controllers plus:
+
+* ShopController: Manages product listings.
+* CartController: Handles cart operations like adding or removing items and applying discounts.
+
+### Helpers
+
+* ShopHelper: Provides methods to present product information in the shop and cart.
+* CartHelper: Offers helper methods for cart-related views.
+
+### Stimulus Controllers
+
+* AddToCartController: Manages adding products to the cart via AJAX.
+* CartAdjustment Controller: Handles updates to cart adjustments.
+* CartItemController: Handles updates to cart items, such as changing quantities.
+* CartController: Updates cart summaries and totals dynamically.
+
+### Services
+
+* Cart: Retrieves or creates a cart
+* Cart::AddItem: Handles adding products to a shopping cart.
+* Cart::UpdateAdjustment: Updates an adjustment in the shopping cart.
+* Cart::UpdateItem: Updates an item in the shopping cart.
+
+
