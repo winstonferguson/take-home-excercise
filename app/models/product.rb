@@ -24,7 +24,7 @@ class Product < ApplicationRecord
   validates :price,
             numericality: {
               greater_than: 0.00,
-              message: ' must be greater than %{value} to activate product.'
+              message: " must be greater than %{value} to activate product."
             },
             if: -> { active? }
 end

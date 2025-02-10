@@ -6,8 +6,8 @@ class OrderItem < ApplicationRecord
   belongs_to :product
   belongs_to :order
 
-   # Ensure price is greater than zero
-   # Free items and discounts should be handled via adjustments.
+  # Ensure price is greater than zero
+  # Free items and discounts should be handled via adjustments.
   validates :price, numericality: { greater_than: 0.00 }
 
   # Ensure subtotal is greater than zero to maintain valid order calculations.

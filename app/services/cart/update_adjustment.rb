@@ -29,13 +29,13 @@ class Cart
       begin
         # Validate that the new amount does not exceed the discount amount.
         unless @amount <= @adjustment.discount.amount
-          @message += 'failed checkable test.'
+          @message += "failed checkable test."
           return false
         end
 
         # Attempt to update the adjustment record.
         unless @adjustment.update(amount: @amount)
-          @message += 'unable to update order adjustment.'
+          @message += "unable to update order adjustment."
           return false
         end
 

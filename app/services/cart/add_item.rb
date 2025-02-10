@@ -30,7 +30,7 @@ class Cart
         price = @product.price
 
         unless checkable_product?(@product) && checkable_price?(price) && checkable_quantity?(@quantity)
-          @message += 'failed checkable test.'
+          @message += "failed checkable test."
           return false
         end
 

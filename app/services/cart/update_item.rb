@@ -24,14 +24,14 @@ class Cart
     def update_item_in_cart
       begin
         unless checkable_quantity?(@quantity)
-          @message += 'failed checkable test.'
+          @message += "failed checkable test."
           return false
         end
 
         subtotal = @item.price * @quantity
 
         unless @item.update(quantity: @quantity, subtotal:)
-          @message += 'unable to update order item.'
+          @message += "unable to update order item."
           false
         end
 

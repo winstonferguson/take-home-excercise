@@ -1,23 +1,22 @@
 # Provides helper methods for rendering cart-related information and actions in views.
 module CartHelper
-
   # Displays the discount amount for a cart adjustment.
   def cart_discount(adjustment)
-    content_tag :div, class: "discount", data: { 'cart-adjustment-target': 'amount' } do
+    content_tag :div, class: "discount", data: { "cart-adjustment-target": "amount" } do
       number_to_currency(adjustment.amount, precision: 0)
     end
   end
 
   # Displays the total number of items in the cart.
   def cart_item_count(cart)
-    content_tag :div, class: "count", data: { 'cart-target': 'itemCount' } do
+    content_tag :div, class: "count", data: { "cart-target": "itemCount" } do
       "#{cart.item_count} items"
     end
   end
 
   # Displays the subtotal for an individual cart item.
   def cart_item_subtotal(item)
-    content_tag :div, class: "subtotal", data: { 'cart-item-target': 'subtotal' } do
+    content_tag :div, class: "subtotal", data: { "cart-item-target": "subtotal" } do
       number_to_currency(item.subtotal, precision: 0)
     end
   end
@@ -41,14 +40,14 @@ module CartHelper
 
   # Displays the cart subtotal.
   def cart_subtotal(cart)
-    content_tag :div, class: "subtotal", data: { 'cart-target': 'subtotal' } do
+    content_tag :div, class: "subtotal", data: { "cart-target": "subtotal" } do
       number_to_currency(cart.subtotal, precision: 0)
     end
   end
 
   # Displays the cart total.
   def cart_total(cart)
-    content_tag :div, class: "total", data: { 'cart-target': 'total' } do
+    content_tag :div, class: "total", data: { "cart-target": "total" } do
       number_to_currency(cart.total, precision: 0)
     end
   end

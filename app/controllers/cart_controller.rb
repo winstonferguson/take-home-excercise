@@ -26,7 +26,7 @@ class CartController < ApplicationController
 
   # Loads the cart edit page, initializing a discount if not present.
   def edit
-    discount = Discount.find_by(name: 'Slider')
+    discount = Discount.find_by(name: "Slider")
     @order_adjustment = @cart.order_adjustments.find_or_create_by(discount:)
   end
 

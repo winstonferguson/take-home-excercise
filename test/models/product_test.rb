@@ -8,7 +8,7 @@ class ProductTest < ActiveSupport::TestCase
   end
 
   test "should validate presence of supplier" do
-    product = Product.new(name: 'Speaker')
+    product = Product.new(name: "Speaker")
 
     assert_not product.valid?, "Validated a product without a supplier"
   end
