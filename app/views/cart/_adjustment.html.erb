@@ -1,0 +1,21 @@
+<div
+  class="adjustment"
+  data-controller="cart-adjustment"
+  data-cart-adjustment-url-value="<%= cart_update_adjustment_path(adjustment) %>"
+  data-cart-adjustment-cart-outlet="#<%= dom_id @cart %>"
+>
+  <div class="info">
+    <p>Move the slider to specify the discount amount</p>
+
+    <%= cart_discount(adjustment) %>
+  </div>
+  <input
+    type="range"
+    class="input"
+    min="0"
+    max="<%= adjustment.discount.amount.to_i %>"
+    step="1"
+    value="<%= adjustment.amount.to_i %>"
+    data-cart-adjustment-target="input"
+  />
+</div>

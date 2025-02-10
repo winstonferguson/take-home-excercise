@@ -1,0 +1,19 @@
+<div
+  id="<%= dom_id item %>"
+  class="product"
+  data-controller="cart-item"
+  data-cart-item-url-value="<%= cart_update_item_path(item) %>"
+  data-cart-item-cart-outlet="#<%= dom_id @cart %>"
+>
+  <div class="image">
+    <% if item.product.image.attached? %>
+      <%= image_tag item.product.image, width: "100px", alt: "Image of #{item.product.name}" %>
+    <% end %>
+  </div>
+  <%= shop_title(item.product) %>
+  <%= render "item_quantity", item: item %>
+  <div class="end">
+    <%= cart_remove_item(item) %>
+    <%= cart_item_subtotal(item) %>
+  </div>
+</div>

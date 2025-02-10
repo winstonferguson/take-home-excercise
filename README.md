@@ -11,6 +11,6 @@ I had a particularly busy week and couldn’t prepare questions in advance, so I
 * In the Figma design, each product title appears to include a supplier name (after the first comma). I will assume each product has one supplier.
 * The reference design doesn’t indicate product variants. I will not implement variants and a product-variant relationship despite it being a flexible and widely used pattern for e-commerce.
 * Since database implementation isn’t specified, I will use SQLite.
-* No external gems are mentioned, and I don’t see a need for any (I’ll keep it simple with pure CSS).
+* No external gems are mentioned. The only additonal gem I'll use is the requestjs-rails gem to make Ajax Requests.
 * A cart page normally follows a shop page, so my application’s root will be a product listing page. This page will feature products with an 'add to cart' functionality for each product.
 

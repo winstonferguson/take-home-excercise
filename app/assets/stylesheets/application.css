@@ -8,3 +8,233 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+ :root {
+  --colour-green: #16A34A;
+  --colour-light-grey: #F8F8F9;
+  --colour-dark-grey: #C6CDD7;
+  --width-page: 1300px;
+  --width-content: 960px;
+ }
+
+ body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+ }
+
+ body * {
+  box-sizing: border-box;
+ }
+
+ .button {
+  appearance: none;
+  background-color: var(--colour-green);
+  border-color: transparent;
+  border-radius: 5px;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 0.75rem;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+ }
+
+ .button.error {
+  background-color: red;
+ }
+
+ .button:disabled {
+  opacity: 0.5;
+ }
+
+ .cart {
+   margin: 0 auto;
+   max-width: var(--width-content);
+ }
+
+ .cart .adjustment .info {
+   align-items: center;
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .cart .adjustment .input {
+   appearance: none;
+   background-color: var(--colour-green);
+   border-radius: 3px;
+   height: 6px;
+   margin: 1rem 0;
+   min-width: 100%;
+ }
+
+ .cart .adjustment .input::-webkit-slider-thumb {
+   appearance: none;
+   height: 50px;
+   background-color: var(--colour-green);
+   border-radius: 25px;
+   width: 50px;
+ }
+
+ .cart .adjustment .discount {
+   font-weight: 600;
+   color: var(--colour-green)
+ }
+
+ .cart .button.pay {
+   padding: 1rem;
+   width: 100%;
+
+ }
+
+ .cart .empty {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+ }
+
+ .cart .empty .heading {
+  margin: 2rem 0 0 0;
+ }
+
+ .cart .empty .message {
+  font-weight: 300;
+ }
+
+ .cart .heading {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+ }
+
+ .cart .heading .reset {
+  appearance: none;
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--colour-dark-grey);
+  cursor: pointer;
+  padding-right: 0;
+ }
+
+ .cart .product-list .product {
+  align-items: center;
+  border-bottom: 1px solid var(--colour-dark-grey);
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  width: 100%;
+ }
+
+ .cart .product-list .product .destroy {
+  appearance: none;
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 1rem;
+}
+
+ .cart .product-list .product .end {
+  margin-left: auto;
+ }
+
+ .cart .product-list .product .quantity {
+  background-color: var(--colour-light-grey);
+  border-radius: 10px;
+  display: flex;
+  font-size: 1.25rem;
+  margin: 0 auto;
+  padding: 0.25rem 1rem;
+  position: relative;
+ }
+
+ .cart .product-list .product .quantity .icon {
+  appearance: none;
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 1.25rem;;
+  font-weight: 300;
+  z-index: 9;
+ }
+
+ .cart .product-list .product .quantity .input {
+  appearance: none;
+  background-color: transparent;
+  border-color: transparent;
+  font-family: "Open sans", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  width: 40px;
+  text-align: center;
+ }
+
+ .cart .product-list .product .title {
+    width: 30%;
+ }
+
+ .cart .summary {
+   border: 1px solid var(--colour-dark-grey);
+   border-radius: 10px;
+   margin: 3rem auto;
+   max-width: var(--width-content);
+   padding: 1rem;
+ }
+
+ .cart .summary .row {
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .cart .summary .row:last-of-type {
+   border-top: 1px solid var(--colour-dark-grey);
+   font-size: 1.5rem;
+   margin: 1rem 0 0 0;
+   padding: 1rem 0 0 0;
+ }
+
+ .cart .summary .total {
+   font-weight: 600;
+ }
+
+ 
+ .header {
+  border-bottom: 1px solid var(--colour-dark-grey);
+  padding: 1rem 2rem;
+ }
+
+ .header > .content {
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+  margin: 0 auto;
+  max-width: var(--width-page);
+ }
+
+ .product {
+  display: flex;
+ }
+
+ .product .summary {
+  display: flex;
+  flex-direction: column;
+ }
+
+ .product .title {
+  font-weight: 400;
+ }
+
+ .product-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: var(--width-content);
+ }
+
+ .product-list .product {
+  border-bottom: 1px solid var(--colour-light-grey);
+  padding: 1rem;
+ }

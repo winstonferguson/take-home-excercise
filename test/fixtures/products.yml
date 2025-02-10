@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  supplier: one
+  name: Product One
+  status: 1
+  sku: P0
+  price: 1.99
+
+two:
+  supplier: two
+  name: Product Two
+  status: 1
+  sku: PT
+  price: 9.99

@@ -1,0 +1,10 @@
+<p style="color: green; text-align:center;"><%= notice %></p>
+
+<% content_for :title, "Shop" %>
+
+<div id="shop content" class="shop product-list">
+  <h1>Shop</h1>
+  <% @products.each do |product| %>
+    <%= render "shop/product", product: product, cart: @cart %>
+  <% end %>
+</div>

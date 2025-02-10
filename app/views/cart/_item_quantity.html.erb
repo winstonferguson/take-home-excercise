@@ -1,0 +1,5 @@
+<div class="quantity">
+  <%= button_tag "+", class: "icon", data: { "cart-item-target": "increase" } %>
+  <%= text_field_tag "", item.quantity,  class: "input", data: { "cart-item-target": "quantity" } %>
+  <%= button_tag "-", class: "icon", data: { "cart-item-target": "decrease" } %>
+</div>

@@ -1,0 +1,45 @@
+<p style="color: green; text-align:center;"><%= notice %></p>
+
+<% content_for :title, "Cart" %>
+
+<div
+  id="<%= dom_id @cart %>"
+  class="cart"
+  data-controller="cart"
+  data-cart-url-value="<%= cart_summary_path %>"
+>
+  <div class="heading">
+    <h1>Cart</h1>
+    <%= cart_reset_link(@cart) %>
+  </div>
+  <% if @cart&.order_items.any? %>
+    <div class="product-list">
+        <% @cart.order_items.each do |item| %>
+          <%= render "cart/item", item: item %>
+        <% end %>
+    </div>
+    <div class="summary">
+      <div class="row">
+        <%= cart_item_count(@cart) %>
+        <%= cart_subtotal(@cart) %>
+      </div>
+
+      <% if defined? @order_adjustment %>
+        <%= render "cart/adjustment", adjustment: @order_adjustment %>
+      <% end %>
+
+      <div class="row">
+        <strong>Total</strong>
+        <%= cart_total(@cart) %>
+      </div>
+    </div>
+
+    <%= cart_pay_now(@cart) %>
+  <% else %>
+    <div class="empty">
+      <%= image_tag "icon_empty.svg", width: "48px" %>
+      <h2 class="heading">The cart is empty.</h2>
+      <p class="message">Add items from the catalog.</p>
+    </div>
+  <% end %>
+</div>

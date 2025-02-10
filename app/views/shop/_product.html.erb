@@ -1,0 +1,12 @@
+<div id="<%= dom_id product %>" class="product">
+  <div class="image">
+    <% if product.image.attached? %>
+      <%= image_tag product.image, width: "300px", alt: "Image of #{product.name}" %>
+    <% end %>
+  </div>
+  <div class="summary" >
+    <%= shop_title(product) %>
+    <%= shop_price(product) %>
+    <%= shop_add_to_cart_button(product, cart) %>
+  </div>
+</div>
